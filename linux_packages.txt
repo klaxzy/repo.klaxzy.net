@@ -1,0 +1,55 @@
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+
+snapd: sudo ln -s /var/lib/snapd/snap /snap
++
+sudo pip3 install protonvpn-cli
+
+sudo pip3 install protonvpn-cli --upgrade
++
+
+sudo dnf install dnf-plugins-core
+
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+
+sudo dnf install brave-browser
++
+systemctl enable --now libvirtd 
+
++++++++++++++
+
+sudo dnf install tilix brave-browser torbrowser-launcher audacity snapd w3m w3m-img cool-retro-term htop mc openvpn dialog python3-pip python3-setuptools LibRaw libmediainfo cryptopp nautilus krusader yakuake timeshift gparted qemu-kvm libvirt virt-install virt-manager libguestfs-tools virt-top certbot screenfetch toolbox cockpit hexchat ImageMagick zsh git
+
+sudo dnf install filelight ranger youtube-dl neofetch ncdu libmediainfo cryptopp
+
+curl cheat.sh
+
+# battery manager - low usage
+sudo dnf install tlp tlp-rdw
+sudo systemctl enable tlp
+
+sudo snap install hollywood --classic
+pip3 install bpytop --upgrade
+
+https://github.com/GitSquared/edex-ui/releases/download/v2.2.7/eDEX-UI-Linux-x86_64.AppImage
+
+# Fedy is a graphical tool which allows you to tweak your Fedora system in few clicks.
+sudo dnf copr enable kwizart/fedy
+sudo dnf install fedy -y
+
+# VCV Rack
+sudo dnf copr enable ycollet/linuxmao
+sudo dnf install Rack-v1
+$ Rack &
+
+sudo dnf install nmap nload iftop vnstat monitorix cockpit-machines smartmontools gsmartcontrol qdirstat
+groupinstall "Headless Management"
++
+sudo vi /etc/vnstat.conf
+Interface "wlp1s0"
+sudo systemctl enable vnstat.service
+vnstati -s -i proton0 -o ~/summary.png
+vnstati -h -i ens33 -o ~/summary2.png
+vnstati -s -i wlo1+proton0 -o ~/summary3.png
++
